@@ -1,0 +1,161 @@
+/*Обнуляющие стили. Мой стартовый шаблон для верстки*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+/*Конец обнуления*/
+
+html, body {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+.header, .contactList, .main, .footer {
+	/* Задаем границы для четырех окон */
+	border: 1px solid #000;
+	/* Конец */
+}
+
+.block__row {
+	display: flex;
+	max-height: 100vh;
+	flex-direction: column;
+}
+
+.block__column {
+	display: flex;
+	min-height: 100%;
+}
+
+.header {
+	min-height: 50px;
+	flex: 0 0 auto;
+	background-color: #1789E7FF;
+}
+
+.header h1 {
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.contactList {
+	width: 200px;
+	max-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	font-size: 14px;
+	padding: 5px;
+}
+
+.contactList h2 {
+	font-size: 30px;
+	padding: 0 0 20px 0;
+}
+
+.contactList p {
+	font-size: 20px;
+	padding: 0 0 20px 0;
+	margin: 0 0 0 5px;
+}
+
+.contactList p:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #2CD233FF;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.main {
+	width: 100%;
+	flex: 1 0 100vh;
+	overflow-y: scroll;
+	font-size: 20px;
+}
+
+.main h2 {
+	font-size: 30px;
+}
+
+.main p {
+	font-size: 22px;
+	padding: 20px;
+}
+
+.message_window {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.sendMessage {
+	flex: 1 0 50%;
+	background-color: #1789E7FF;
+	max-width: 500px;
+	border-radius: 40px 40px 0 40px;
+	margin: 10px;
+	/* Размещаем отправленные сообщения с правого края окна сообщений*/
+	position: relative;
+	left: 70%;
+	/* Конец */
+}
+
+.getMessage {
+	flex: 1 1 50%;
+	background-color: #654ea2;
+	max-width: 500px;
+	border-radius: 0 40px 40px 40px;
+	margin: 10px
+}
+
+.footer {
+	/* Задаем минимальную высоту для подвала, чтобы он имел возможность расширятся под внутренний контент */
+	min-height: 100px;
+	/* Конец */
+	flex: 0 0 auto;
+	background-color: #1789E7FF;
+}
+
+.footer h2 {
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #fff;
+}
